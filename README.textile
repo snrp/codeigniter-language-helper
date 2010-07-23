@@ -1,0 +1,28 @@
+h1.  Language Helper
+
+This is a very small language_helper extension that adds a $var parameter to the lang() function.
+
+h2.  Compatibility
+
+This will work with CodeIgniter 1.7.x and 2.0.
+
+h2.  Installation
+
+Copy the MY_language_helper.php file into your application/helpers folder.
+
+h2.  Usage
+
+In your language files you can now put variables inside your strings, prepended with a colon (:).
+
+Example:
+
+<pre><code>$lang['welcome'] = 'Hello :name, how are you? Today is :date!';</code></pre>
+
+Then when you call the lang() helper function you send an array with the variable values.
+
+Example:
+<pre><code><?php echo lang('welcome', array(':name' => 'Dan', ':date' => date('l'))); ?></code></pre>
+
+And this would output:
+
+"Hello Dan, how are you? Today is Friday!"
